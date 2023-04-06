@@ -44,6 +44,7 @@ const ScaffoldEthApp = ({ Component, pageProps }: AppProps) => {
       <RainbowKitProvider chains={appChains.chains} avatar={BlockieAvatar}>
         <div className="flex flex-col min-h-screen">
           {!isThreeJs && <Header />}
+          {/* <Header/> */}
           <main className="relative flex flex-col flex-1">
             {isThreeJs ? (
               <Scene className="pointer-events-none" eventPrefix="client">

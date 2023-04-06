@@ -1,7 +1,4 @@
-import { Ships, Oceans } from "~~/canvas";
-import { Sun } from "~~/canvas/Sun";
-/* import { Worm } from "~~/canvas/Worm"; */
-import { Camping } from "~~/canvas/islands/Camping";
+import { Oceans, Beach } from "~~/canvas";
 import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 
@@ -14,12 +11,8 @@ export default function Three() {
 
   return (
     <group>
-      <Ships count={10} range={400} />;
-      <Oceans sideLength={10} />
-      {/* <MyScene /> */}
-      <Sun />
-      {/* <Worm /> */}
-      <Camping scale={[10, 10, 10]} position={[50, 5, 50]} />
+      <Oceans sideLength={20} />
+      <Beach />
     </group>
   );
 }

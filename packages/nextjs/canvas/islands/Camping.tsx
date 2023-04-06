@@ -1,6 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 import { Object3D } from "three";
 import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
+import { useInteractingStore, useReadingStore } from "../../context/ModalsContext";
 
 export interface CampingProps {
   position: [number, number, number];
@@ -12,23 +13,29 @@ interface IslandProps {
 }
 
 export function SnowIsland({ model }: IslandProps) {
-  const onClick = () => {
-    console.log("clicked the snow island");
+  const [reading, updateReading] = useReadingStore(state => [state.reading, state.updateReading]);
+
+  const openModal = () => {
+    console.log("opening modal");
+    updateReading(!reading);
   };
+
   return (
-    <group onClick={onClick}>
-      <primitive object={model} />;
+    <group onClick={openModal}>
+      <primitive object={model} />
     </group>
   );
 }
 
 export function CaveLand({ model }: IslandProps) {
+  const [interacting, updateInteracting] = useInteractingStore(state => [state.interacting, state.updateInteracting]);
+
   const onClick = () => {
-    console.log("clicked the pirate island");
+    updateInteracting(!interacting);
   };
   return (
     <group onClick={onClick}>
-      <primitive object={model} />;
+      <primitive object={model} />
     </group>
   );
 }

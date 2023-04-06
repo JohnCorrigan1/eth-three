@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
 
 :root,
 [data-theme] {
@@ -9,6 +10,9 @@
 
 body {
   min-height: 100vh;
+}
+
+ {
 }
 
 h1,
@@ -29,4 +33,14 @@ p {
 
 .btn.btn-ghost {
   @apply shadow-none;
+}
+
+.scroll {
+  background-image: url("/scrollmit.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.cursive {
+  font-family: 'Fasthand', cursive;
 }
