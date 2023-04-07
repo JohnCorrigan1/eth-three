@@ -15,15 +15,3 @@ export default function Page() {
     </>
   );
 }
-
-/* export default function Three() {
- *   return (
- *     <Canvas>
- *       <ambientLight />
- *       <mesh>
- *         <boxBufferGeometry attach="geometry" />
- *         <meshStandardMaterial attach="material" color="hotpink" />
- *       </mesh>
- *     </Canvas>
- *   );
- * } */

@@ -43,8 +43,7 @@ const ScaffoldEthApp = ({ Component, pageProps }: AppProps) => {
       <NextNProgress />
       <RainbowKitProvider chains={appChains.chains} avatar={BlockieAvatar}>
         <div className="flex flex-col min-h-screen">
-          {!isThreeJs && <Header />}
-          {/* <Header/> */}
+          <Header />
           <main className="relative flex flex-col flex-1">
             {isThreeJs ? (
               <Scene className="pointer-events-none" eventPrefix="client">
@@ -54,7 +53,9 @@ const ScaffoldEthApp = ({ Component, pageProps }: AppProps) => {
               <Component {...pageProps} />
             )}
           </main>
-          {!isThreeJs && <Footer />}
+          {/* {!isThreeJs && <Footer />} */}
+
+          <Footer />
         </div>
         <Toaster />
       </RainbowKitProvider>
