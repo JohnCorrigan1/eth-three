@@ -18,7 +18,7 @@ const InteractionModal: React.FC = () => {
 
   return (
     <div
-      className="fixed h-[600px] w-[600px] flex top-1/2 left-1/4 -translate-y-2/3 -translate-x-1/2 flex-col mt-6 px-7 py-8 bg-base-200 opacity-80 rounded-2xl shadow-lg border-2 border-primary"
+      className="fixed h-[500px] w-[400px] flex top-1/2 left-1/4 -translate-y-2/3 -translate-x-1/2 flex-col mt-6 px-7 py-8 bg-base-200 opacity-80 rounded-2xl shadow-lg border-2 border-primary"
       onClick={closeModal}
     >
       <span className="text-4xl sm:text-6xl text-black">Set a Greeting_</span>

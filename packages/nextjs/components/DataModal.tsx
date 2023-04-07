@@ -12,7 +12,7 @@ const DataModal: React.FC = () => {
 
   return (
     <div
-      className="fixed min-h-[600px] min-w-[600px] flex top-1/2 right-1/4 -translate-y-2/3 translate-x-1/4 flex-col mt-6 px-7 py-8 bg-base-200 opacity-80 rounded-2xl shadow-lg border-2 border-primary"
+      className="fixed h-[500px] w-[400px] flex top-1/2 right-1/4 -translate-y-2/3 translate-x-1/4 flex-col mt-6 px-7 py-8 bg-base-200 opacity-80 rounded-2xl shadow-lg border-2 border-primary"
       onClick={closeModal}
     >
       <ContractData />

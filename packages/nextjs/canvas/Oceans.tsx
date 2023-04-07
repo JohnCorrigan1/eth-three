@@ -1,8 +1,6 @@
 import { useGLTF } from "@react-three/drei";
 import { Object3DProps } from "@react-three/fiber";
-import { useMemo, useState } from "react";
-import { useSpring, animated } from "@react-spring/three";
-import { Vector3 } from "three";
+import { useMemo } from "react";
 
 interface OceanProps extends Object3DProps {
   x: number;
@@ -11,17 +9,11 @@ interface OceanProps extends Object3DProps {
 
 const Ocean = ({ x, z }: OceanProps) => {
   const model = useGLTF("/ocean.glb");
-  const [click] = useState(false);
-  const { scale } = useSpring({
-    scale: click ? new Vector3(1, 1, 1) : new Vector3(0.05, 0.05, 0.05),
-  });
-  const onClick = () => {
-    console.log("click");
-  };
+
   return (
-    <animated.object3D position={[x, 0, z]} scale={scale} onClick={onClick}>
+    <object3D position={[x, 0, z]} scale={0.05}>
       <primitive object={model.scene.clone()} />
-    </animated.object3D>
+    </object3D>
   );
 };
 

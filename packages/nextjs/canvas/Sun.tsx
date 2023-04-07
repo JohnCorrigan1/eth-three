@@ -11,7 +11,7 @@ export function Sun() {
   });
 
   return (
-    <animated.mesh onClick={() => setActive(!active)} position={[100, 100, 100]} scale={scale}>
+    <animated.mesh onClick={() => setActive(!active)} position={[200, 100, 200]} scale={scale}>
       <primitive object={model.scene} />
     </animated.mesh>
   );
