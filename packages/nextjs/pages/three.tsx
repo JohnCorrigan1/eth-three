@@ -1,4 +1,4 @@
-import Three from "../components/Three";
+import Three from "../components/ExampleThree/Three";
 import Head from "next/head";
 
 export default function Page() {

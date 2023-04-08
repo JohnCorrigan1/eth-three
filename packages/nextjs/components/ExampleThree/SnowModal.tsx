@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTransition, animated } from "@react-spring/web";
-import { useStore } from "../context/ModalsContext";
+import { useStore } from "../../context/ModalsContext";
 import Image from "next/image";
 
 export default function SnowModal() {

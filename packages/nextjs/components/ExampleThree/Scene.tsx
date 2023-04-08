@@ -5,7 +5,6 @@ import DataModal from "./DataModal";
 
 export default function Scene({ children, ...props }: any) {
   // Everything defined in here will persist between route changes, only children are swapped
-
   return (
     <>
       <Canvas

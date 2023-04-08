@@ -21,7 +21,7 @@ import NextNProgress from "nextjs-progressbar";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
-const Scene = dynamic(() => import("../components/Scene"), { ssr: true });
+const Scene = dynamic(() => import("../components/ExampleThree/Scene"), { ssr: true });
 
 const ScaffoldEthApp = ({ Component, pageProps }: AppProps) => {
   const price = useEthPrice();
@@ -53,8 +53,6 @@ const ScaffoldEthApp = ({ Component, pageProps }: AppProps) => {
               <Component {...pageProps} />
             )}
           </main>
-          {/* {!isThreeJs && <Footer />} */}
-
           <Footer />
         </div>
         <Toaster />
